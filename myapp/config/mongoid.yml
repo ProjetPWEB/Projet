@@ -58,7 +58,7 @@ development:
 test:
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: mongodb://psymon3:azerty1234@emma.mongohq.com:10019/projet_pweb
       options:
         read: primary
         # In the test environment we lower the retries and retry interval to
