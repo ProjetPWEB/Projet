@@ -58,10 +58,13 @@ development:
 test:
   sessions:
     default:
-      uri: mongodb://psymon3:azerty1234@emma.mongohq.com:10019/projet_pweb
-      options:
-        read: primary
-        # In the test environment we lower the retries and retry interval to
-        # low amounts for fast failures.
-        max_retries: 1
-        retry_interval: 0
+      database: myapp_test
+      # Provides the hosts the default session can connect to. Must be an array
+      # of host:port pairs. (required)
+      hosts:
+        - localhost:27017
+        
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
