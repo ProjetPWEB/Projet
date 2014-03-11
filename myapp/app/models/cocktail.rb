@@ -1,7 +1,8 @@
-class Ingredient
+class Cocktail
   include Mongoid::Document
   field :name, type: String
-  field :type, type: Integer 
   field :description, type: String
-  field :degree, type: Integer
+  field :rating, type: Integer
+  belongs_to :user
+  has_many :component
 end

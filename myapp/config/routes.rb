@@ -1,5 +1,9 @@
 Myapp::Application.routes.draw do
 
+  resources :components
+
+  resources :cocktails
+
   resources :bars
 
   resources :ingredients
