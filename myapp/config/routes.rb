@@ -1,5 +1,7 @@
 Myapp::Application.routes.draw do
 
+  resources :bars
+
   resources :ingredients
 
   devise_for :users

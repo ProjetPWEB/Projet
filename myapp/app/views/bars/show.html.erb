@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ingr:</strong>
+  <%= @bar.ingr %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @bar.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_bar_path(@bar) %> |
+<%= link_to 'Back', bars_path %>
