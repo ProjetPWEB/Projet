@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :ingr %><br>
-    <%= f.text_field :ingr %>
+    <%= f.label :ingredient %><br>
+    <%= f.number_field :ingredient %>
   </div>
-  
+
   <div class="field">
     <%= f.label :quantity %><br>
     <%= f.number_field :quantity %>
@@ -23,9 +23,4 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
-<%= simple_form_for @user do |f| %>
-  <%= f.input :user %>
-  <%= f.input :age, collection: 18..60 %>
-  <%= f.button :submit %>
 <% end %>
