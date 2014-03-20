@@ -5,11 +5,16 @@ class BarsController < ApplicationController
   # GET /bars.json
   def index
     @bars = Bar.all
+    render json: @bars
   end
 
   # GET /bars/1
   # GET /bars/1.json
   def show
+  end
+
+  def my_bar
+    @my_bar = Bar.all
   end
 
   # GET /bars/new

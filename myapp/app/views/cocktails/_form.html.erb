@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :rating %><br>
-    <%= f.number_field :rating %>
+    <%= f.number_field :rating,  :min => 0, :max => 20, :value =>10 %>
   </div>
   <div class="actions">
     <%= f.submit %>

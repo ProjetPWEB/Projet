@@ -44,3 +44,4 @@ end
 
 gem 'mongoid', '~> 4.0.0.beta1', github: 'mongoid/mongoid'
 gem 'devise', '~> 3.2.3'
+gem 'simple_form'
