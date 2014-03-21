@@ -1,10 +1,10 @@
-<h1>Listing bars</h1>
+<h1>Mon Bar :</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Ingr</th>
-      <th>Quantity</th>
+      <th>Ingrédient :  </th>
+      <th>Quantité :</th>
       <th></th>
       <th></th>
       <th></th>
@@ -13,13 +13,15 @@
 
   <tbody>
     <% @bars.each do |bar| %>
+      <% if bar.user == current_user %>
       <tr>
-        <td><%= bar.ingredient %></td>
+        <td><%= bar.ingredient.name %></td>
         <td><%= bar.quantity %></td>
         <td><%= link_to 'Show', bar %></td>
         <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
         <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <%- end %>
     <% end %>
   </tbody>
 </table>

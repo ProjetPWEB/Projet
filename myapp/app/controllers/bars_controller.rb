@@ -5,7 +5,7 @@ class BarsController < ApplicationController
   # GET /bars.json
   def index
     @bars = Bar.all
-    render json: @bars
+   # render json: @bars
   end
 
   # GET /bars/1
@@ -29,7 +29,7 @@ class BarsController < ApplicationController
   # POST /bars
   # POST /bars.json
   def create
-    @bar = Bar.new(bar_params)
+    @bar = Bar.new(bar_params.merge(user: current_user))
 
     respond_to do |format|
       if @bar.save
@@ -74,6 +74,6 @@ class BarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bar_params
-      params.require(:bar).permit(:ingr, :quantity)
+      params.require(:bar).permit(:ingredient_id, :quantity)
     end
 end
