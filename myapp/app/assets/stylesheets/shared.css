@@ -1,3 +1,13 @@
 body {
 	padding-top:45px;
 }
+
+.footer-container {
+	height : 50px;
+}
+
+.footer-container .navbar-brand {
+	float: none;
+	height: 50px;
+	display: inline-block;
+}
