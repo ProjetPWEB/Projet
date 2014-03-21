@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :ingredient %><br>
-    <%= f.number_field :ingredient %>
+    <%= f.label :ingredient_id %><br>
+    <%= f.select :ingredient_id,  options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
   </div>
 
   <div class="field">
     <%= f.label :quantity %><br>
-    <%= f.number_field :quantity %>
+    <%= f.number_field :quantity ,:min => 0%>
   </div>
   <div class="actions">
     <%= f.submit %>
