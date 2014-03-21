@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -57,12 +62,14 @@
 <%= yield %>
 
 </body>
-<link href="sticky-footer.css" rel="stylesheet">
+<link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
 <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
   <div class="container text-center">
+  	<div class="footer-container">
     <a class="navbar-brand" href="/about"><i class="glyphicon glyphicon-question-sign"></i> About us</a>
     <a class="navbar-brand" href="/contact"><i class="glyphicon glyphicon-envelope"></i> Contact</a>
     <a class="navbar-brand" href="/contact"><i class="glyphicon glyphicon-usd"></i> Support DrinCloud</a>
+    </div>
   </div>
 </nav>
 </html>
