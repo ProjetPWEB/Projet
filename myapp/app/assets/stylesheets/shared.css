@@ -11,3 +11,8 @@ body {
 	height: 50px;
 	display: inline-block;
 }
+
+.navbar-static-bottom{
+	position:absolute;
+	bottom:0px;
+}
