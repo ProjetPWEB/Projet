@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :type %><br>
-    <%= f.number_field :type %>
+    <%= f.number_field :type, :min=>0, :max=>2 %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :degree %><br>
-    <%= f.number_field :degree %>
+    <%= f.number_field :degree, :min=>0, :max=>100 %>
   </div>
   <div class="actions">
     <%= f.submit %>

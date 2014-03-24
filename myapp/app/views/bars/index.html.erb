@@ -17,9 +17,9 @@
       <tr>
         <td><%= bar.ingredient.name %></td>
         <td><%= bar.quantity %></td>
-        <td><%= link_to 'Show', bar %></td>
-        <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
-        <td><%= link_to 'Destroy', bar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--<td><%= link_to 'Show', bar %></td>-->
+        <td><%= link_to 'Modifier quantité', edit_bar_path(bar) %></td>
+        <td><%= link_to 'Supprimer ingrédient', bar, method: :delete, data: { confirm: 'Etes-vous certain de vouloir supprimer cet ingrédient de votre bar ?' } %></td>
       </tr>
       <%- end %>
     <% end %>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Bar', new_bar_path %>
+<%= link_to 'Ajouter un ingrédient dans mon bar', new_bar_path %>
