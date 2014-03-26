@@ -24,7 +24,7 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
-    @cocktail = Cocktail.new(cocktail_params)
+    @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
 
     respond_to do |format|
       if @cocktail.save
