@@ -16,8 +16,14 @@
       <% if bar.user == current_user %>
       <tr>
         <td><%= bar.ingredient.name %></td>
-        <td><%= bar.quantity %></td>
-        <!--<td><%= link_to 'Show', bar %></td>-->
+        <td><%= bar.quantity %> 
+            <%if bar.ingredient.type==2 %>
+            g
+            <% else %>
+            cl
+            <% end %>
+       </td>
+
         <td><%= link_to 'Modifier quantité', edit_bar_path(bar) %></td>
         <td><%= link_to 'Supprimer ingrédient', bar, method: :delete, data: { confirm: 'Etes-vous certain de vouloir supprimer cet ingrédient de votre bar ?' } %></td>
       </tr>
