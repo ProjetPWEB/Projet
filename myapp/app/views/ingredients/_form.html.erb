@@ -17,17 +17,30 @@
   </div>
   <div class="field">
     <%= f.label :type %><br>
-    <%= f.number_field :type, :min=>0, :max=>2 %>
+    <select id="ingredient_type" name="ingredient[type]" onchange="hideDegree()">
+		<option value="0">Liquide non alcoolisé</option>
+		<option value="1">Liquide alcoolisé</option>
+		<option value="2">Solide</option>
+	</select>
   </div>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
-  <div class="field">
-    <%= f.label :degree %><br>
-    <%= f.number_field :degree, :min=>0, :max=>100 %>
-  </div>
+	  <div id="degreeDiv" class="field" style="display:none">
+		<%= f.label :degree %><br>
+		<%= f.number_field :degree, :min=>0, :max=>100 %>
+	  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script>
+	function hideDegree(){
+		var selectType = document.getElementById("ingredient_type");
+		var selectedType = selectType.selectedIndex;
+		if(selectedType==1){document.getElementById("degreeDiv").style.display="block";}
+		else{document.getElementById("degreeDiv").style.display="none";}
+	}
+</script>
