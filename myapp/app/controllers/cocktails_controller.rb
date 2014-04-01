@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
   # GET /cocktails.json
   def index
     @cocktails = Cocktail.all
+   # render json: @bars
   end
 
   # GET /cocktails/1
@@ -24,6 +25,7 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
+    print :component
     @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
 
     respond_to do |format|
