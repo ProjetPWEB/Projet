@@ -31,7 +31,7 @@
     <%= select_tag :component, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
     </td>
     <td>
-    <input type="number" name="quantity" min="0">
+    <input type="number" id="quantity" min="0">
     </td>
     </td>
     <td> 
@@ -63,14 +63,40 @@
   var btn_add = document.getElementById('btn_add');
   var btn_rm = document.getElementById('btn_rm');
   var component = document.getElementById('component');
-  btn_add.onclick=function(){transfere(component,liste_ingr)}
-  btn_rm.onclick=function(){transfere(liste_ingr,component)}
+  var quantity = document.getElementById('quantity');
+  btn_add.onclick=function(){fun_add()};
+  btn_rm.onclick=function(){fun_rm()};
 
-function transfere(source,destination){
-  for(var i = source.options.length-1; i>=0; i--){
-    if (source.options[i].selected){
-       destination.options[destination.options.length]=source.options[i]
+function fun_add(){
+  for(var i = component.options.length-1; i>=0; i--){
+    if (component.options[i].selected){
+      var res = [component.options[i].innerHTML,quantity.value];
+      var opt = document.createElement('option');
+      opt.innerHTML = res;
+      opt.value = res;
+      if(dans_liste(component.options[i].innerHTML)){
+        liste_ingr.appendChild(opt);  
+      } 
+      else{
+         alert("Cet ingrédient est déjà dans la liste");
+      }
     }
   }
+}
+function fun_rm(){
+  liste_ingr.remove(liste_ingr.selectedIndex)
+}
+function dans_liste(ingr){
+  var res = true;
+  for(var i = 0; i<liste_ingr.options.length;i++){
+    if(liste_ingr.options[i].innerHTML.split(",")[0]==ingr){
+     
+      res =  false;
+    }
+    else {
+      res = res && true;
+    }
+  }
+  return res
 }
 </script>
