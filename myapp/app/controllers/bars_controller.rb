@@ -30,7 +30,7 @@ class BarsController < ApplicationController
   # POST /bars.json
   def create
     @bar = Bar.new(bar_params.merge(user: current_user))
-
+    
     respond_to do |format|
       if @bar.save
         format.html { redirect_to @bar, notice: 'Bar was successfully created.' }
