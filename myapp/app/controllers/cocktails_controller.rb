@@ -25,6 +25,7 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
+    params.require(:cocktail).permit(:components)
     puts "select %s." % components
     @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
 
@@ -71,6 +72,6 @@ class CocktailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cocktail_params
-      params.require(:cocktail).permit(:name, :description, :rating)
+      params.require(:cocktail).permit(:name, :description, :rating, :components)
     end
 end
