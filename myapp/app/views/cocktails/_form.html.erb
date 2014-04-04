@@ -62,19 +62,19 @@
   var liste_ingr = document.getElementById('liste_ingr');
   var btn_add = document.getElementById('btn_add');
   var btn_rm = document.getElementById('btn_rm');
-  var component = document.getElementById('component');
+  var ingredient = document.getElementById('ingredient');
   var quantity = document.getElementById('quantity');
   btn_add.onclick=function(){fun_add()};
   btn_rm.onclick=function(){fun_rm()};
 
 function fun_add(){
-  for(var i = component.options.length-1; i>=0; i--){
-    if (component.options[i].selected){
-      var res = [component.options[i].innerHTML,quantity.value];
+  for(var i = ingredient.options.length-1; i>=0; i--){
+    if (ingredient.options[i].selected){
+      var res = [ingredient.options[i].innerHTML,quantity.value];
       var opt = document.createElement('option');
       opt.innerHTML = res;
       opt.value = res;
-      if(dans_liste(component.options[i].innerHTML)){
+      if(dans_liste(ingredient.options[i].innerHTML)){
         liste_ingr.appendChild(opt);  
       } 
       else{
