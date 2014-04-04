@@ -59,7 +59,7 @@
 
 
 <script>
-  var liste_ingr = document.getElementById('liste_ingr');
+  var components = document.getElementById('components');
   var btn_add = document.getElementById('btn_add');
   var btn_rm = document.getElementById('btn_rm');
   var ingredient = document.getElementById('ingredient');
@@ -75,7 +75,7 @@ function fun_add(){
       opt.innerHTML = res;
       opt.value = res;
       if(dans_liste(ingredient.options[i].innerHTML)){
-        liste_ingr.appendChild(opt);  
+        components.appendChild(opt);  
       } 
       else{
          alert("Cet ingrédient est déjà dans la liste");
@@ -84,12 +84,12 @@ function fun_add(){
   }
 }
 function fun_rm(){
-  liste_ingr.remove(liste_ingr.selectedIndex)
+  components.remove(components.selectedIndex)
 }
 function dans_liste(ingr){
   var res = true;
-  for(var i = 0; i<liste_ingr.options.length;i++){
-    if(liste_ingr.options[i].innerHTML.split(",")[0]==ingr){
+  for(var i = 0; i<components.options.length;i++){
+    if(components.options[i].innerHTML.split(",")[0]==ingr){
      
       res =  false;
     }
