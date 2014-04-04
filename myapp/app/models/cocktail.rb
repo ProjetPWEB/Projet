@@ -5,4 +5,8 @@ class Cocktail
   field :rating, type: Integer
   belongs_to :user
   has_many :component
+
+  validates :user ,:presence=> true,:uniqueness=>true
+  validates :name ,:presence=> true,:uniqueness=>true
+  validates :description ,:presence=> true
 end

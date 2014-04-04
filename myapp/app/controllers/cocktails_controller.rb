@@ -25,13 +25,12 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
-    params.require(:cocktail).permit(:components)
+    params.require(:cocktail).permit(:component)
     @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
-	#getcomps = Ingredient.find(params[:cocktail][:components]) rescue []
-	puts 'OKKKKKKKKKKKKKKKKKKKKKK'
+	getcomps = Ingredient.find(params[:cocktail][:components]) rescue []
+	puts '\n ICI \n '
 	puts params[:cocktail]
-	#@cocktail.components = getcomps
-
+  puts getcomps
     respond_to do |format|
       if @cocktail.save
         format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }

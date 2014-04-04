@@ -31,7 +31,7 @@
     <%= select_tag :ingredient, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
     </td>
     <td>
-    <input type="number" id="quantity" min="0">
+    <input type="number" id="quantity" min="0", value="0">
     </td>
     </td>
     <td> 
@@ -40,7 +40,7 @@
     </tr>
     <tr>
     <td colspan="3">
-      <%= f.select :components %>
+      <%= f.select :component, [], :size=>"30x10" %>
     </td>
     <td>
     <button type="button" id="btn_rm">Enlever Ingrédient</button>
@@ -56,7 +56,7 @@
 
 
 <script>
-  var components = document.getElementById('components');
+  var components = document.getElementById('cocktail_component');
   var btn_add = document.getElementById('btn_add');
   var btn_rm = document.getElementById('btn_rm');
   var ingredient = document.getElementById('ingredient');
