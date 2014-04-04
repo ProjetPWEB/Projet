@@ -28,7 +28,7 @@
   <table> 
     <tr>
     <td colspan="2">
-    <%= select_tag :component, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
+    <%= select_tag :ingredient, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
     </td>
     <td>
     <input type="number" id="quantity" min="0">
@@ -41,7 +41,7 @@
     <tr>
     <td colspan="3">
     <fieldset>
-      <select id="liste_ingr" multiple="multiple">
+      <select id="components" multiple="multiple">
       </select>
     </fieldset>
     </td>

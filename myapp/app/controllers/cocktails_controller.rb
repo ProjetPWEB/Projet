@@ -5,7 +5,7 @@ class CocktailsController < ApplicationController
   # GET /cocktails.json
   def index
     @cocktails = Cocktail.all
-   # render json: @bars
+  #render json: @cocktails
   end
 
   # GET /cocktails/1
