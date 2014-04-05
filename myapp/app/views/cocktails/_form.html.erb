@@ -31,7 +31,7 @@
     <%= select_tag :ingredient, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
     </td>
     <td>
-    <input type="number" id="quantity" min="0", value="0">
+    <input type="number" id="quantity" min="1" value="1">
     </td>
     </td>
     <td> 
@@ -40,7 +40,9 @@
     </tr>
     <tr>
     <td colspan="3">
-      <%= f.select :component, [], :size=>"30x10" %>
+    <fieldset>
+      <%= f.select :component, options_for_select([]), multiple: true %>
+    </fieldset>
     </td>
     <td>
     <button type="button" id="btn_rm">Enlever Ingrédient</button>

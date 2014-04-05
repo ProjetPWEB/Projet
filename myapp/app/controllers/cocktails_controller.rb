@@ -29,8 +29,8 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
 	getcomps = Ingredient.find(params[:cocktail][:components]) rescue []
 	puts '\n ICI \n '
-	puts params[:cocktail]
-  puts getcomps
+	puts params[:cocktail][:component]
+ 
     respond_to do |format|
       if @cocktail.save
         format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
