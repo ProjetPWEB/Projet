@@ -29,7 +29,7 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
 	getcomps = Ingredient.find(params[:cocktail][:components]) rescue []
 	puts '\n ICI \n '
-	puts params[:cocktail][:component]
+	puts params[:cocktail]
  
     respond_to do |format|
       if @cocktail.save

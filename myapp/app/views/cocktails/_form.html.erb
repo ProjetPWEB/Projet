@@ -38,15 +38,19 @@
      <button type="button" id="btn_add">Ajouter Ingrédient</button>
     </td>
     </tr>
+
     <tr>
     <td colspan="3">
-    <fieldset>
-      <%= f.select :component, options_for_select([]), multiple: true %>
-    </fieldset>
+    
+      <%= f.select :component, options_for_select([]) %>
+
     </td>
+    <script type="text/javascript">$('#cocktail_component').attr('multiple', true);</script>
+    <!-- Parce que fuck it, en ruby j'arrivais pas à le mettre multiple -->
     <td>
     <button type="button" id="btn_rm">Enlever Ingrédient</button>
     </td>
+    </tr>
     </table>
   </div>
   <div class="actions">
