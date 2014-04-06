@@ -24,7 +24,7 @@
     <%= f.number_field :rating,  :min => 0, :max => 20, :value =>10 %>
   </div>
   <div class="field">
-  <%= f.label :component %><br>
+
   <table> 
     <tr>
     <td colspan="2">
@@ -39,13 +39,16 @@
     </td>
     </tr>
 
+
     <tr>
     <td colspan="3">
     
-      <%= f.select :component, options_for_select([]) %>
+      <%= f.select(:component, options_for_select([]),:multiple => true) %>
 
     </td>
-    <script type="text/javascript">$('#cocktail_component').attr('multiple', true);</script>
+    <script type="text/javascript">
+    $('#cocktail_component').attr('multiple', true);
+    </script>
     <!-- Parce que fuck it, en ruby j'arrivais pas à le mettre multiple -->
     <td>
     <button type="button" id="btn_rm">Enlever Ingrédient</button>
@@ -78,7 +81,9 @@ function fun_add(){
       opt.innerHTML = res;
       opt.value = res;
       if(dans_liste(ingredient.options[i].innerHTML)){
-        components.appendChild(opt);  
+        opt.selected=true;
+        components.appendChild(opt); 
+
       } 
       else{
          alert("Cet ingrédient est déjà dans la liste");
