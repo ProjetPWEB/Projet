@@ -25,11 +25,9 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
-    params.require(:cocktail).permit(:name, :description, :rating, {:components => []})
-    @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
-puts "AAAAAAAAAAA"
-puts params[:cocktail][:component]
-	for i in 0..(params[:cocktail][:components].length-1)
+  
+  allcomps = []
+  for i in 0..(params[:cocktail][:components].length-1)
 		foundingr = (Ingredient.find_by name:(params[:cocktail][:components][i].split(',')[0]))
 		foundqtt = params[:cocktail][:components][i].split(',')[1]
 		comparray = Hash.new
@@ -37,14 +35,16 @@ puts params[:cocktail][:component]
 		comparray['quantity'] = foundqtt
 		comparray['cocktail'] = Cocktail.last
 		newcomponent = Component.new(comparray)
-		Cocktail.last.components << newcomponent
+		allcomps << newcomponent
 	end
-	puts '\n ICI \n '
-	puts Cocktail.last.components
- 	puts '\n CIC \n '
+	
+    params.require(:cocktail).permit(:name, :description, :rating, {:components => []})
+    newparams=cocktail_params.merge(user: current_user)
+    @cocktail = Cocktail.new(newparams)
  
     respond_to do |format|
       if @cocktail.save
+		
         format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
         format.json { render action: 'show', status: :created, location: @cocktail }
       else
