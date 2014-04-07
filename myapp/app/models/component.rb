@@ -4,7 +4,7 @@ class Component
   field :quantity, type: Integer
   belongs_to :cocktail
 
-  validates :cocktail ,:presence=> true,:uniqueness=>true
+  validates :cocktail ,:presence=> true,:uniqueness=>false
   validates :ingredient ,:presence=> true
   validates :quantity ,:presence=> true
 end
