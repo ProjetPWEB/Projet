@@ -43,12 +43,12 @@
     <tr>
     <td colspan="3">
     
-      <%= f.select(:component,  options_for_select([]),:multipart => true) %>
+      <%= f.select(:components,  options_for_select([]),:multipart => true) %>
 
     </td>
     <script type="text/javascript">
-    $('#cocktail_component').attr('multiple', true);
-    $('#cocktail_component').attr('name', 'cocktail[component][]');
+    $('#cocktail_components').attr('multiple', true);
+    $('#cocktail_components').attr('name', 'cocktail[components][]');
     </script>
     <!-- Parce que fuck it, en ruby j'arrivais pas à le mettre multiple -->
     <td>
@@ -66,7 +66,7 @@
 
 
 <script>
-  var components = document.getElementById('cocktail_component');
+  var components = document.getElementById('cocktail_components');
   var btn_add = document.getElementById('btn_add');
   var btn_rm = document.getElementById('btn_rm');
   var ingredient = document.getElementById('ingredient');

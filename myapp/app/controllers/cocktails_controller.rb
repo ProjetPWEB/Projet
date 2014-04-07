@@ -25,21 +25,22 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
-    params.require(:cocktail).permit(:name, :description, :rating, {:component => []})
+    params.require(:cocktail).permit(:name, :description, :rating, {:components => []})
     @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
-
-	for i in 0..(params[:cocktail][:component].length-1)
-		foundingr = (Ingredient.find_by name:(params[:cocktail][:component][i].split(',')[0]))
-		foundqtt = params[:cocktail][:component][i].split(',')[1]
+puts "AAAAAAAAAAA"
+puts params[:cocktail][:component]
+	for i in 0..(params[:cocktail][:components].length-1)
+		foundingr = (Ingredient.find_by name:(params[:cocktail][:components][i].split(',')[0]))
+		foundqtt = params[:cocktail][:components][i].split(',')[1]
 		comparray = Hash.new
 		comparray['ingr'] = foundingr
 		comparray['quantity'] = foundqtt
 		comparray['cocktail'] = Cocktail.last
-		#newcomponent = Component.new(comparray)
-		Cocktail.last.component.create(comparray)
+		newcomponent = Component.new(comparray)
+		Cocktail.last.components << newcomponent
 	end
 	puts '\n ICI \n '
-	puts Cocktail.last.component
+	puts Cocktail.last.components
  	puts '\n CIC \n '
  
     respond_to do |format|
