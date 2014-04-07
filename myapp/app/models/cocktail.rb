@@ -6,7 +6,7 @@ class Cocktail
   belongs_to :user
   has_many :component
 
-  validates :user ,:presence=> true,:uniqueness=>true
+  validates :user ,:presence=> true,:uniqueness=>false
   validates :name ,:presence=> true,:uniqueness=>true
   validates :description ,:presence=> true
 end
