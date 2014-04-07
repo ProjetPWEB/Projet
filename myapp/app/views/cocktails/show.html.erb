@@ -17,7 +17,8 @@
 <p>
   <strong>Ingrédients :</strong>
   <% @cocktail.components.each do |c| %>
-  <p> <%= c %> </p>
+  <p> <%= c.ingredient.name %> </p>
+  <p> <%= c.quantity %> </p>
   <% end %>
 </p>
 

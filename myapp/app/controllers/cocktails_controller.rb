@@ -45,6 +45,11 @@ class CocktailsController < ApplicationController
     
     respond_to do |format|
       if @cocktail.save
+        puts "LA AVANT : "
+        puts Cocktail.last.components.length
+        allcomps.each do |c|
+          Cocktail.last.components << c
+        end
         puts "ICIIII : "
         puts Cocktail.last.components.length
         format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
