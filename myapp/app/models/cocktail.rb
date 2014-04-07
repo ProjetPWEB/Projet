@@ -4,7 +4,7 @@ class Cocktail
   field :description, type: String
   field :rating, type: Integer
   belongs_to :user
-  has_many :components, autosave: true
+  embeds_many :components
 
   validates :user ,:presence=> true,:uniqueness=>false
   validates :name ,:presence=> true,:uniqueness=>true

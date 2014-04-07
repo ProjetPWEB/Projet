@@ -25,26 +25,28 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
-  
-  allcomps = []
-  for i in 0..(params[:cocktail][:components].length-1)
-		foundingr = (Ingredient.find_by name:(params[:cocktail][:components][i].split(',')[0]))
-		foundqtt = params[:cocktail][:components][i].split(',')[1]
-		comparray = Hash.new
-		comparray['ingr'] = foundingr
-		comparray['quantity'] = foundqtt
-		comparray['cocktail'] = Cocktail.last
-		newcomponent = Component.new(comparray)
-		allcomps << newcomponent
-	end
-	
+    allcomps = []
+    for i in 0..(params[:cocktail][:components].length-1)
+          foundingr = (Ingredient.find_by name:(params[:cocktail][:components][i].split(',')[0]))
+          foundqtt = params[:cocktail][:components][i].split(',')[1]
+          comparray = Hash.new
+          comparray['ingredient'] = foundingr
+          comparray['quantity'] = foundqtt
+          comparray['cocktail'] = Cocktail.last
+          puts "COMPONENT : "
+          newcomponent = Component.new(comparray)
+          puts newcomponent.ingredient.name
+          puts newcomponent.quantity
+          allcomps << newcomponent
+    end
     params.require(:cocktail).permit(:name, :description, :rating, {:components => []})
-    newparams=cocktail_params.merge(user: current_user)
+    newparams=cocktail_params.merge({user: current_user})
     @cocktail = Cocktail.new(newparams)
- 
+    
     respond_to do |format|
       if @cocktail.save
-		
+        puts "ICIIII : "
+        puts Cocktail.last.components.length
         format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
         format.json { render action: 'show', status: :created, location: @cocktail }
       else

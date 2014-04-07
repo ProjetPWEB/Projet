@@ -71,4 +71,5 @@ class ComponentsController < ApplicationController
     def component_params
       params.require(:component).permit(:ingr, :quantity)
     end
+
 end
