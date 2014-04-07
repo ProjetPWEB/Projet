@@ -25,7 +25,13 @@ class CocktailsController < ApplicationController
   # POST /cocktails
   # POST /cocktails.json
   def create
+<<<<<<< HEAD
     params.require(:cocktail).permit(:name, :description, :rating, {:component => []})
+=======
+    params.require(:cocktail).permit(:name, :description, :rating, :component => [""])
+  # binding.pry
+
+>>>>>>> 9fae1b5c66bbdf40aba637368b63a573a5b7f138
     @cocktail = Cocktail.new(cocktail_params.merge(user: current_user))
 	getcomps = Ingredient.find(params[:cocktail][:component]) rescue []
 
