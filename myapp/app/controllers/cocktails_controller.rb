@@ -23,7 +23,36 @@ class CocktailsController < ApplicationController
   end
 
   def search_by_bar
-    @cocktails = Cocktail.all
+    @cocktails = []
+    @mes_ingr = []
+    Bar.all.each do |b|
+      if b.user==current_user
+        @mes_ingr << b.ingredient
+      end
+    end
+    puts "Mon Bar"
+    puts @mes_ingr[0].name
+    puts @mes_ingr[1].name
+    puts @mes_ingr[2].name
+    puts "Mon Bar Trié"
+    @mes_ingr.sort! { |a,b| a.name.downcase <=> b.name.downcase }
+    puts @mes_ingr[0].name
+    puts @mes_ingr[1].name
+    puts @mes_ingr[2].name
+
+    Cocktail.all.each do |c|
+      @cocktail_ingr = []
+      puts "Cocktail"
+      puts c.name
+      c.components.each do |compo|
+        @cocktail_ingr << compo.ingredient 
+      end
+      @cocktail_ingr.sort! { |a,b| a.name.downcase <=> b.name.downcase }
+      if @cocktail_ingr == @mes_ingr
+        puts "Ce Cocktail a les meme ingrédients que moi, on l'ajoute"
+        @cocktails<<c
+      end
+    end
   end
 
   # POST /cocktails
