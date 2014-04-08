@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field input-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class=>"form-control", :placeholder=>"Nom du Cocktail" %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description, :size => "30x10" %>
+    <%= f.text_area :description, :size => "30x10"%>
   </div>
   <div class="field">
     <%= f.label :rating %><br>
@@ -35,7 +35,7 @@
     </td>
     </td>
     <td> 
-     <button type="button" id="btn_add">Ajouter Ingrédient</button>
+     <button type="button" id="btn_add" class="btn btn-default">Ajouter Ingrédient</button>
     </td>
     </tr>
 
@@ -52,13 +52,13 @@
     </script>
     <!-- Parce que fuck it, en ruby j'arrivais pas à le mettre multiple -->
     <td>
-    <button type="button" id="btn_rm">Enlever Ingrédient</button>
+    <button type="button" id="btn_rm" class="btn btn-default">Enlever Ingrédient</button>
     </td>
     </tr>
     </table>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class=>"btn btn-default"%>
   </div>
 
   <a href="/ingredients/new">Vous voulez ajouter un ingrédient qui n'est pas dans la base de données ? Cliquez ici </a>
