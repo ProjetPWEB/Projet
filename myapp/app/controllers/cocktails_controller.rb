@@ -22,6 +22,10 @@ class CocktailsController < ApplicationController
   def edit
   end
 
+  def search_by_bar
+    @cocktails = Cocktail.all
+  end
+
   # POST /cocktails
   # POST /cocktails.json
   def create
@@ -45,12 +49,9 @@ class CocktailsController < ApplicationController
     
     respond_to do |format|
       if @cocktail.save
-        puts "LA AVANT : "
-        puts Cocktail.last.components.length
         allcomps.each do |c|
           Cocktail.last.components << c
         end
-        puts "ICIIII : "
         puts Cocktail.last.components.length
         format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
         format.json { render action: 'show', status: :created, location: @cocktail }

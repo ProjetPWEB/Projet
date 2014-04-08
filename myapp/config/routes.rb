@@ -14,6 +14,7 @@ Myapp::Application.routes.draw do
   root 'home#index'
 
   get '/bars/my_bar' => 'bar#my_bar'
+  get '/toto' => 'cocktail#search_by_bar'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

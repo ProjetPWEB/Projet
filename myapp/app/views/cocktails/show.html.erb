@@ -27,6 +27,9 @@
   
   <% end %>
 </p>
-
-<%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
-<%= link_to 'Back', cocktails_path %>
+<% if @cocktail.user == current_user %>
+	<%= link_to 'Supprimer ce cocktail', @cocktail, method: :delete, data: { confirm: 'Are you sure?' } %><br/>
+	<%= link_to 'Modifier ce cocktail', edit_cocktail_path(@cocktail) %>
+<% end %>
+<br/>
+<%= link_to 'Retour', cocktails_path %>

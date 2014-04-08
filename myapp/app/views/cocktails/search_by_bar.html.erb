@@ -1,4 +1,4 @@
-<h1>Liste des cocktails</h1>
+<h1>Cocktails réalisables avec le contenu de mon bar</h1>
 
 <table>
   <thead>
@@ -18,7 +18,7 @@
         <td><%= cocktail.name %></td>
         <td><%= cocktail.description %></td>
         <td><%= cocktail.rating %> /20 </td>
-        <td><%= link_to 'Détails', cocktail %></td> 
+        <td><%= link_to 'En savoir plus', cocktail %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,3 @@
 
 <br>
 
-<%= link_to 'Proposer une nouvelle recette', new_cocktail_path %>
