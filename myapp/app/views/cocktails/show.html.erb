@@ -12,13 +12,19 @@
 
 <p>
   <strong>Note :</strong>
-  <%= @cocktail.rating %>
+  <%= @cocktail.rating %>/20
 </p>
 <p>
   <strong>Ingrédients :</strong>
   <% @cocktail.components.each do |c| %>
-  <p> <%= c.ingredient.name %> </p>
-  <p> <%= c.quantity %> </p>
+  <p> <%= c.ingredient.name %> : <%= c.quantity %> 
+  		<%if c.ingredient.type==2 %>
+            g
+        <% else %>
+            cl
+        <% end %>
+  </p>
+  
   <% end %>
 </p>
 

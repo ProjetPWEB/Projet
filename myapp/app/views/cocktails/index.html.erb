@@ -17,7 +17,7 @@
       <tr>
         <td><%= cocktail.name %></td>
         <td><%= cocktail.description %></td>
-        <td><%= cocktail.rating %></td>
+        <td><%= cocktail.rating %> /20 </td>
         <td><%= link_to 'Show', cocktail %></td>
         <td><%= link_to 'Edit', edit_cocktail_path(cocktail) %></td>
         <td><%= link_to 'Destroy', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
