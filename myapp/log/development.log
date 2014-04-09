@@ -3418,3 +3418,1093 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 14:40:39
 
 
 Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 14:40:39 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:14:30 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7301ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 3.9686ms
+Completed 200 OK in 100ms (Views: 81.0ms)
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:14:31 +0200
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2014-04-09 16:14:33 +0200
+Processing by CocktailsController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5689ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5067ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"components", :query=>{"cocktail_id"=>BSON::ObjectId('534555ca53696d695c000000')}} runtime: 0.5866ms
+  Rendered cocktails/_form.html.erb (52.7ms)
+  Rendered cocktails/new.html.erb within layouts/application (57.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4257ms
+Completed 200 OK in 85ms (Views: 67.0ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2014-04-09 16:14:34 +0200
+Processing by CocktailsController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4352ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"components", :query=>{"cocktail_id"=>BSON::ObjectId('534555ca53696d695c010000')}} runtime: 0.6979ms
+  Rendered cocktails/_form.html.erb (7.0ms)
+  Rendered cocktails/new.html.erb within layouts/application (8.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3989ms
+Completed 200 OK in 16ms (Views: 15.5ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2014-04-09 16:14:34 +0200
+Processing by BarsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=bars selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4484ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4588ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3889ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4680ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4407ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4535ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4097ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('5344494653696d1828040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3322ms
+  Rendered bars/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 40ms (Views: 23.8ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2014-04-09 16:14:34 +0200
+Processing by BarsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=bars selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3328ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4471ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3040ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5002ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5587ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2902ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2657ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('5344494653696d1828040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2585ms
+  Rendered bars/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 19ms (Views: 18.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:14:35 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4103ms
+  Rendered cocktails/index.html.erb within layouts/application (2.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3851ms
+Completed 200 OK in 41ms (Views: 40.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:14:35 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3316ms
+  Rendered cocktails/index.html.erb within layouts/application (2.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4722ms
+Completed 200 OK in 11ms (Views: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:14:35 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4350ms
+Completed 200 OK in 11ms (Views: 10.7ms)
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:14:35 +0200
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:14:35 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:14:35 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:14:35 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3877ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2668ms
+Completed 200 OK in 13ms (Views: 12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:14:36 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4900ms
+Completed 200 OK in 10ms (Views: 9.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:14:37 +0200
+
+
+Started GET "/bars" for 127.0.0.1 at 2014-04-09 16:14:39 +0200
+Processing by BarsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5388ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=bars selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4130ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5155ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5925ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4905ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5863ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4552ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5261ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('5344494653696d1828040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4160ms
+  Rendered bars/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 34ms (Views: 33.2ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2014-04-09 16:14:39 +0200
+Processing by BarsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=bars selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4855ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4315ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3486ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2713ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3524ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3054ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4217ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('5344494653696d1828040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3301ms
+  Rendered bars/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 21ms (Views: 20.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:14:41 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5221ms
+  Rendered cocktails/index.html.erb within layouts/application (2.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3988ms
+Completed 200 OK in 14ms (Views: 12.2ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:14:41 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5009ms
+  Rendered cocktails/index.html.erb within layouts/application (3.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5283ms
+Completed 200 OK in 14ms (Views: 13.2ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+Processing by BarsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=bars selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4983ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5196ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4700ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3463ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4836ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2951ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3589ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('5344494653696d1828040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3422ms
+  Rendered bars/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 26ms (Views: 24.4ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+Processing by BarsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=bars selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5581ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7254ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5752ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4626ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5655ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6722ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5117ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('5344494653696d1828040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6186ms
+  Rendered bars/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 29ms (Views: 28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4020ms
+Completed 200 OK in 9ms (Views: 8.0ms)
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4585ms
+  Rendered cocktails/index.html.erb within layouts/application (2.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8451ms
+Completed 200 OK in 25ms (Views: 24.6ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3871ms
+  Rendered cocktails/index.html.erb within layouts/application (3.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3765ms
+Completed 200 OK in 14ms (Views: 11.4ms)
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:14:43 +0200
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4328ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3681ms
+  Rendered cocktails/index.html.erb within layouts/application (2.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4788ms
+Completed 200 OK in 12ms (Views: 11.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:45 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:46 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:14:46 +0200
+
+
+Started GET "/cocktails/53444c7653696d18280c0000" for 127.0.0.1 at 2014-04-09 16:14:48 +0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"53444c7653696d18280c0000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={"_id"=>BSON::ObjectId('53444c7653696d18280c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4081ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=components selector={"cocktail_id"=>BSON::ObjectId('53444c7653696d18280c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4500ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3479ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3783ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3352ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4023ms
+  Rendered cocktails/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 19ms (Views: 16.4ms)
+
+
+Started GET "/cocktails/53444c7653696d18280c0000" for 127.0.0.1 at 2014-04-09 16:14:48 +0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"53444c7653696d18280c0000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={"_id"=>BSON::ObjectId('53444c7653696d18280c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3143ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=components selector={"cocktail_id"=>BSON::ObjectId('53444c7653696d18280c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4283ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3044ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3000ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.8030ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3594ms
+  Rendered cocktails/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 20ms (Views: 18.7ms)
+
+
+Started GET "/cocktails/53444c7653696d18280c0000" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+Processing by CocktailsController#show as HTML
+  Parameters: {"id"=>"53444c7653696d18280c0000"}
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={"_id"=>BSON::ObjectId('53444c7653696d18280c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3876ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=components selector={"cocktail_id"=>BSON::ObjectId('53444c7653696d18280c0000')} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4420ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3249ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.2424ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3387ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5816ms
+  Rendered cocktails/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 17ms (Views: 15.1ms)
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:50 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:14:51 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:14:51 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:14:55 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4142ms
+Completed 200 OK in 12ms (Views: 11.2ms)
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:14:55 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:14:55 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:14:55 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4489ms
+Completed 200 OK in 15ms (Views: 14.3ms)
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:14:55 +0200
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:19:22 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5029ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4777ms
+  Rendered cocktails/index.html.erb within layouts/application (3.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4118ms
+Completed 200 OK in 12ms (Views: 11.3ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:19:22 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5602ms
+  Rendered cocktails/index.html.erb within layouts/application (2.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3762ms
+Completed 200 OK in 18ms (Views: 16.1ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2014-04-09 16:19:24 +0200
+Processing by CocktailsController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4608ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"components", :query=>{"cocktail_id"=>BSON::ObjectId('534556ec53696d695c020000')}} runtime: 0.4221ms
+  Rendered cocktails/_form.html.erb (5.8ms)
+  Rendered cocktails/new.html.erb within layouts/application (7.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3923ms
+Completed 200 OK in 18ms (Views: 17.1ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2014-04-09 16:19:24 +0200
+Processing by CocktailsController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.3856ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"components", :query=>{"cocktail_id"=>BSON::ObjectId('534556ec53696d695c030000')}} runtime: 0.3937ms
+  Rendered cocktails/_form.html.erb (10.7ms)
+  Rendered cocktails/new.html.erb within layouts/application (11.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4936ms
+Completed 200 OK in 22ms (Views: 21.5ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+Processing by CocktailsController#new as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5117ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"components", :query=>{"cocktail_id"=>BSON::ObjectId('534556f253696d695c040000')}} runtime: 0.4966ms
+  Rendered cocktails/_form.html.erb (5.8ms)
+  Rendered cocktails/new.html.erb within layouts/application (6.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.7759ms
+Completed 200 OK in 19ms (Views: 17.9ms)
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:19:30 +0200
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2014-04-09 16:20:59 +0200
+Processing by CocktailsController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.3859ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.2663ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"components", :query=>{"cocktail_id"=>BSON::ObjectId('5345574b53696d695c050000')}} runtime: 0.4944ms
+  Rendered cocktails/_form.html.erb (6.5ms)
+  Rendered cocktails/new.html.erb within layouts/application (7.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4612ms
+Completed 200 OK in 16ms (Views: 15.2ms)
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:21:00 +0200
+
+
+Started POST "/cocktails" for 127.0.0.1 at 2014-04-09 16:21:09 +0200
+Processing by CocktailsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N4Rv4ydq2Cskb9Ia1r4gf1XsAS1CL/1GcacXwlWhr24=", "cocktail"=>{"name"=>"llll", "rating"=>"10", "description"=>"dgds"}, "ingredient"=>"532ae60a53696d3353040000", "commit"=>"Create Cocktail"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `length' for nil:NilClass):
+  app/controllers/cocktails_controller.rb:76:in `create'
+
+
+  Rendered /home/simon/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/simon/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/simon/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/simon/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started GET "/cocktails/new" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+Processing by CocktailsController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5641ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4781ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=myapp_development command={:count=>"components", :query=>{"cocktail_id"=>BSON::ObjectId('534557a253696d695c060000')}} runtime: 0.4758ms
+  Rendered cocktails/_form.html.erb (7.9ms)
+  Rendered cocktails/new.html.erb within layouts/application (9.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6938ms
+Completed 200 OK in 22ms (Views: 21.0ms)
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:26 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:27 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:27 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:27 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:27 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:27 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:27 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:27 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:22:27 +0200
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:22:32 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5345ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5640ms
+  Rendered cocktails/index.html.erb within layouts/application (3.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5117ms
+Completed 200 OK in 17ms (Views: 16.1ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:22:32 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4402ms
+  Rendered cocktails/index.html.erb within layouts/application (1.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 1.1355ms
+Completed 200 OK in 21ms (Views: 20.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:22:33 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4169ms
+Completed 200 OK in 12ms (Views: 11.9ms)
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:22:33 +0200
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:22:33 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:22:33 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:22:33 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4508ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3705ms
+Completed 200 OK in 12ms (Views: 11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:22:34 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4631ms
+Completed 200 OK in 10ms (Views: 9.7ms)
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:22:35 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5124ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5223ms
+Completed 200 OK in 14ms (Views: 12.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:54 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:55 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:55 +0200
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:23:55 +0200
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:23:55 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:23:55 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:23:55 +0200
+
+
+Started GET "/bars" for 127.0.0.1 at 2014-04-09 16:23:56 +0200
+Processing by BarsController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.7547ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=bars selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5432ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3811ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3054ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3530ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3540ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3099ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5521ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('5344494653696d1828040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3263ms
+  Rendered bars/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 36ms (Views: 35.5ms)
+
+
+Started GET "/bars" for 127.0.0.1 at 2014-04-09 16:23:56 +0200
+Processing by BarsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=bars selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.4190ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4216ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4941ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('532ae60a53696d3353040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4510ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3289ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('533050c153696d1ae7010000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.1982ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3527ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=ingredients selector={"$query"=>{"_id"=>BSON::ObjectId('5344494653696d1828040000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3649ms
+  Rendered bars/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 18ms (Views: 17.9ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:23:56 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.6024ms
+  Rendered cocktails/index.html.erb within layouts/application (3.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6309ms
+Completed 200 OK in 15ms (Views: 14.5ms)
+
+
+Started GET "/cocktails" for 127.0.0.1 at 2014-04-09 16:23:56 +0200
+Processing by CocktailsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=cocktails selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil runtime: 0.5604ms
+  Rendered cocktails/index.html.erb within layouts/application (2.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.6073ms
+Completed 200 OK in 13ms (Views: 12.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:23:57 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.5440ms
+Completed 200 OK in 15ms (Views: 14.2ms)
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:23:57 +0200
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:23:57 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:23:57 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:23:57 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5343ms
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.4009ms
+Completed 200 OK in 18ms (Views: 17.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-09 16:23:58 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=myapp_development collection=users selector={"$query"=>{"_id"=>BSON::ObjectId('5329c86c53696d2296000000')}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil runtime: 0.3953ms
+Completed 200 OK in 13ms (Views: 11.9ms)
+
+
+Started GET "/assets/shared.css" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/cocktails.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/ingredients.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/bars.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/shared.css?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/bars.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/cocktails.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/ingredients.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/Cocktail1.jpg" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/Cocktail2.jpg" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/Cocktail3.jpg" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
+
+
+Started GET "/assets/Beach.jpg" for 127.0.0.1 at 2014-04-09 16:23:59 +0200
