@@ -27,6 +27,11 @@ body {
 
 .new_cocktail_form{
 	width:50%;
+	padding: 1%;
+}
+
+.cocktail-form{
+	width:100%;
 }
 
 .btn-submit-cocktail{
@@ -34,8 +39,16 @@ body {
 	margin:10px 25% 10px 25%;
 }
 
+.smoothlayout{
+	margin: 10px 5px 10px 5px;
+}
+
 .txtarea-cocktail-form{
-	max-width:100%;
-	height:200px;
-	max-height:200px;
+	width: 100%;
+	resize: none;
+}
+
+.txtarea-container{
+	width: 100%;
+	height:300px;
 }
