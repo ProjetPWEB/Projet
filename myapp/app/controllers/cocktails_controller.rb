@@ -51,6 +51,20 @@ class CocktailsController < ApplicationController
       if @cocktail_ingr == @mes_ingr
         puts "Ce Cocktail a les meme ingrédients que moi, on l'ajoute"
         @cocktails<<c
+      else
+        if @cocktail_ingr.length < @mes_ingr.length
+          bool_res = true
+          @cocktail_ingr.each do |ci|
+            if @mes_ingr.include? ci
+              bool_res = bool_res & true
+            else
+              bool_res = bool_res & false
+            end
+          end  
+        end
+        if bool_res == true
+          @cocktails << c
+        end
       end
     end
   end
