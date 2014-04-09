@@ -1,28 +1,34 @@
-<h1>Liste des cocktails</h1>
+	<h1>Liste des cocktails</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Description</th>
-      <th>Note</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<div class="row">
+	
+	<% @cocktails.each_with_index do |cocktail, i| %>
 
-  <tbody>
-    <% @cocktails.each do |cocktail| %>
-      <tr>
-        <td><%= cocktail.name %></td>
-        <td><%= cocktail.description %></td>
-        <td><%= cocktail.rating %> /20 </td>
-        <td><%= link_to 'Détails', cocktail %></td> 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		<div class="col-lg-4">		
+			<ul class="list-group cocktail-list-item">
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-lg-6">
+							Nom: <%= cocktail.name %>
+						</div>
+						<div class="col-lg-6">
+							Difficulté: <%= cocktail.rating %> /20
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item"><%= cocktail.description %></li>
+				<li class="list-group-item"><%= link_to 'Détails', cocktail %></li> 
+			</ul>
+		</div>
+
+		<%if i%3==2 %>
+			</div>
+			<div class="row">
+		<% end %>
+
+	<% end %>
+	
+	</div>
 
 <br>
 

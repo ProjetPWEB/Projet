@@ -1,77 +1,84 @@
-<div class="new_cocktail_form">
+<div class="row">
 
-<%= form_for(@cocktail) do |f| %>
-  <% if @cocktail.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cocktail.errors.count, "error") %> prohibited this cocktail from being saved:</h2>
+	<div class="col-lg-2"></div>
+	<div class="col-lg-8">
+	<%= form_for(@cocktail) do |f| %>
+	  <% if @cocktail.errors.any? %>
+		<div id="error_explanation">
+		  <h2><%= pluralize(@cocktail.errors.count, "error") %> prohibited this cocktail from being saved:</h2>
 
-      <ul>
-      <% @cocktail.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <table style="width:100%">
-  <tr>
-  <td>
-  <div class="field input-group">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, :class=>"form-control", :placeholder=>"Nom du Cocktail" %>
-  </div>
-  </td>
-  <td style="text-align: right; padding-right:0px">
-  <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.number_field :rating,  :min => 0, :max => 20, :value =>10, :class=>"form-control" %>
-  </div>
-  </td>
-  </tr>
-  </table>
-  
-  <div class="field input-group txtarea-container">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, :style=>"height:300px", :class=>"form-control txtarea-cocktail-form", :placeholder=>"Description et recette du cocktail"%>
-  </div>
-  <div class="field">
-
-  <table> 
-    <tr>
-    <div class="input-group smoothlayout">
-		<div class="input-group-btn">
-			<%= select_tag :ingredient, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
+		  <ul>
+		  <% @cocktail.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		  <% end %>
+		  </ul>
 		</div>
-		<input type="number" id="quantity" min="1" value="1" class="form-control">
-		<div class="input-group-btn">
-			<button type="button" id="btn_add" class="btn btn-default">Ajouter Ingrédient</button>
+	  <% end %>
+
+	  <table style="width:100%">
+	  <tr>
+	  <td>
+	  <div class="field input-group">
+		<%= f.label :name %><br>
+		<%= f.text_field :name, :class=>"form-control", :placeholder=>"Nom du Cocktail" %>
+	  </div>
+	  </td>
+	  <td style="text-align: right; padding-right:0px">
+	  <div class="field">
+		<%= f.label :rating %><br>
+		<%= f.number_field :rating,  :min => 0, :max => 20, :value =>10, :class=>"form-control" %>
+	  </div>
+	  </td>
+	  </tr>
+	  </table>
+	  
+	  <div class="field input-group txtarea-container">
+		<%= f.label :description %><br>
+		<%= f.text_area :description, :style=>"height:300px", :class=>"form-control txtarea-cocktail-form", :placeholder=>"Description et recette du cocktail"%>
+	  </div>
+	  <div class="field">
+
+	  <table> 
+		<tr>
+		<div class="input-group smoothlayout">
+			<div class="input-group-btn">
+				<%= select_tag :ingredient, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
+			</div>
+			<input type="number" id="quantity" min="1" value="1" class="form-control">
+			<div class="input-group-btn">
+				<button type="button" id="btn_add" class="btn btn-default">Ajouter Ingrédient</button>
+			</div>
 		</div>
+		</tr>
+
+
+		<tr>
+		<td colspan="3" class="cocktail-form">
+		  <%= f.select(:components,  options_for_select([]),:multipart => true) %>
+		</td>
+		
+		<script type="text/javascript">
+		$('#cocktail_components').attr('multiple', true);
+		$('#cocktail_components').attr('name', 'cocktail[components][]');
+		</script>
+		
+		<td>
+		<button type="button" id="btn_rm" class="btn btn-default">Enlever Ingrédient</button>
+		</td>
+		</tr>
+		</table>
+	  </div>
+	  <div class="actions">
+		<%= f.submit :class=>"btn btn-default btn-submit-cocktail"%>
+	  </div>
+
+	  <div class="cocktail-form-link"><a href="/ingredients/new">Vous voulez ajouter un ingrédient qui n'est pas dans la base de données ? Cliquez ici </a></div>
+	  
+	<% end %>
 	</div>
-	</tr>
+	
+	<div class="col-lg-2"></div>
 
-
-    <tr>
-    <td colspan="3" class="cocktail-form">
-      <%= f.select(:components,  options_for_select([]),:multipart => true) %>
-    </td>
-    
-    <script type="text/javascript">
-    $('#cocktail_components').attr('multiple', true);
-    $('#cocktail_components').attr('name', 'cocktail[components][]');
-    </script>
-    
-    <td>
-    <button type="button" id="btn_rm" class="btn btn-default">Enlever Ingrédient</button>
-    </td>
-    </tr>
-    </table>
-  </div>
-  <div class="actions">
-    <%= f.submit :class=>"btn btn-default btn-submit-cocktail"%>
-  </div>
-
-  <a href="/ingredients/new">Vous voulez ajouter un ingrédient qui n'est pas dans la base de données ? Cliquez ici </a>
-<% end %>
 </div>
 
 <script>
