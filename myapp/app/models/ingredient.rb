@@ -8,6 +8,6 @@ class Ingredient
   validates :type ,:presence=> true
   validates :name ,:presence=> true,:uniqueness=>true
   validates :description ,:presence=> true
-
+  validates_numericality_of :type, :allow_nil => false, :greater_than => -1, :less_than_or_equal_to => 2, :only_integer => true
 
 end
