@@ -1,38 +1,47 @@
-<h1>Mon Bar :</h1>
+<div class="row">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
 
-<table>
-  <thead>
-    <tr>
-      <th>Ingrédient :  </th>
-      <th>Quantité :</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<div class="align"><h3><span class="label label-primary">Mon Bar</span></h3></div>
 
-  <tbody>
-    <% @bars.each do |bar| %>
-      <% if bar.user == current_user %>
-      <tr>
-        <td><%= bar.ingredient.name %></td>
-        <td><%= bar.quantity %> 
-            <%if bar.ingredient.type==2 %>
-            g
-            <% else %>
-            cl
-            <% end %>
-       </td>
+	<ul class="list-group">
+		<% @bars.each do |bar| %>
+		  <% if bar.user == current_user %>
+			  <li class="list-group-item">
+				<div class="row">
+					<div class="col-lg-6">
+						<%= bar.ingredient.name %></td> : <%= bar.quantity %> 
+						<%if bar.ingredient.type==2 %>
+							g
+						<% else %>
+							cl
+						<% end %>
+					</div>
+					<div class="col-lg-6">
+						<div class="align">
+							<div class="btn-group btn-group-sm" role="toolbar">
+								<div class="btn btn-default">
+									<%= link_to 'Modifier quantité', edit_bar_path(bar) %>
+								</div>
+								<div class="btn btn-default">
+									<%= link_to 'Supprimer ingrédient', bar, method: :delete, data: { confirm: 'Etes-vous certain de vouloir supprimer cet ingrédient de votre bar ?' } %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			  </li>
+		  <%- end %>
+		<% end %>
+	</ul>
 
-        <td><%= link_to 'Modifier quantité', edit_bar_path(bar) %></td>
-        <td><%= link_to 'Supprimer ingrédient', bar, method: :delete, data: { confirm: 'Etes-vous certain de vouloir supprimer cet ingrédient de votre bar ?' } %></td>
-      </tr>
-      <%- end %>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<a href="/bars/new"><button>Ajouter un ingrédient</button> </a><br/>
-<a href="/search_by_bar"><button>Rechercher les cocktails que je peux faire avec le contenu de mon bar</button> </a>
+	<div class="align">
+		<div class="btn-group" role="toolbar">
+			<a href="/bars/new"><div class="btn btn-default">Ajouter un ingrédient</div></a>
+			<a href="/search_by_bar"><div class="btn btn-default">Rechercher les cocktails que je peux faire avec le contenu de mon bar</div></a>
+		</div>
+	</div>
+	
+</div>
+<div class="col-lg-2"></div>
+</div>
