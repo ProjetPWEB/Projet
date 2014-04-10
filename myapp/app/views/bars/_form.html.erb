@@ -1,28 +1,58 @@
+<div class="row">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+
+<div class="align"><h3><span class="label label-primary">Ajouter un ingrédient à mon Bar</span></h3></div></br>
+
 <%= form_for(@bar) do |f| %>
   <% if @bar.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@bar.errors.count, "error") %> prohibited this bar from being saved:</h2>
+      <h4>
+		<span class="label label-warning"><%= pluralize(@bar.errors.count, "erreur(s)") %> ont empéché la saisie de cet ingrédient dans votre bar:</span>
+	  </h4>
 
       <ul>
-      <% @bar.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+		  <% @bar.errors.full_messages.each do |msg| %>
+			<li>
+				<span class="label label-danger"><%= msg %></span>
+			</li>
+		  <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :ingredient_id %><br>
-    <%= f.select :ingredient_id, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
-  </div>
+	<div class="field">
+		<div class="input-group smoothlayout">
+			<div class="input-group-btn">
+				<%= f.select :ingredient_id, options_for_select(Ingredient.all.map {|i| [i.name, i.id]}) %>
+			</div>
 
-  <div class="field">
-    <%= f.label :quantity %><br>
-    <%= f.number_field :quantity ,:min => 0%>
-  </div>
+			<div class="field">
+				<%= f.number_field :quantity ,:min => 0, :class=>"form-control", placeholder:"Quantité (cl/gr)" %>
+			</div>
+		</div>
+	</div>
+  </br>
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class=>"btn btn-default btn-submit", :id=>"submit-bar-button" %>
   </div>
-    <a href="/ingredients/new">Vous voulez ajouter un ingrédient qui n'est pas dans la base de données ? Cliquez ici </a>
+  </br>
+	<div class="align" style="width:100%">
+		<a href="/ingredients/new">
+			<div class="btn-group btn-group-xs">
+				<div class="btn btn-default">Vous voulez ajouter un ingrédient qui n'est pas dans la base de données ? Cliquez ici </div>
+			</div>
+		</a>	
+	</div>
 
 <% end %>
+
+</div>
+<div class="col-lg-2"></div>
+</div>
+
+<script>
+	$('#bar_ingredient_id').attr('class', "btn btn-default dropdown-toggle");
+	$('#submit-bar-button').attr('value', "Ajouter l'ingrédient à mon bar");
+</script>

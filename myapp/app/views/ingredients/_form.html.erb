@@ -2,11 +2,13 @@
 <div class="col-lg-2"></div>
 <div class="col-lg-8">
 
+<div class="align"><h3><span class="label label-primary">Nouvel Ingrédient</span></h3></div>
+
 <%= form_for(@ingredient) do |f| %>
   <% if @ingredient.errors.any? %>
     <div id="error_explanation">
       <h4>
-		<span class="label label-warning"><%= pluralize(@ingredient.errors.count, "erreur") %> a empéché la validation de l'ingrédient:</span>
+		<span class="label label-warning"><%= pluralize(@ingredient.errors.count, "erreur(s)") %> a empéché la validation de l'ingrédient:</span>
 	  </h4>
 
       <ul>
@@ -19,13 +21,14 @@
     </div>
   <% end %>
 
+</br>
 <div class="input-group smoothlayout" style="width:100%">
-    <%= f.label :Nom %>
     <div class="row">
+		<div class="col-lg-3"></div>
 		<div class="col-lg-3">
 			<%= f.text_field :name, :class=>"form-control", :placeholder=>"Nom de l'ingrédient"%>
 		</div>
-		<div class="col-lg-2">
+		<div class="col-lg-3">
 			<div class="input-group-button">
 				<select id="ingredient_type" class="btn btn-default dropdown-toggle" name="ingredient[type]" onchange="hideDegree()">
 					<option value="0">Liquide non alcoolisé</option>
@@ -34,7 +37,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-lg-7"></div>
+		<div class="col-lg-3"></div>
 	</div>
 </div>
 

@@ -3,11 +3,12 @@
 	<div class="col-lg-2"></div>
 	<div class="col-lg-8">
 	
+	<div class="align"><h3><span class="label label-primary">Nouvelle Recette</span></h3></div>
 	<%= form_for(@cocktail) do |f| %>
 	  <% if @cocktail.errors.any? %>
 		<div id="error_explanation">
 		  <h4>
-			<span class="label label-warning"><%= pluralize(@cocktail.errors.count, "erreur") %> a empéché la validation de la recette:</span>
+			<span class="label label-warning"><%= pluralize(@cocktail.errors.count, "erreur(s)") %> a empéché la validation de la recette:</span>
 		  </h4>
 
 		  <ul>
