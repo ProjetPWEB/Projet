@@ -33,7 +33,7 @@ class BarsController < ApplicationController
     
     respond_to do |format|
       if @bar.save
-        format.html { redirect_to @bar, notice: 'Bar was successfully created.' }
+        format.html { redirect_to '/bars', notice: 'L\ingrédient suivant a été ajouté à votre bar:' }
         format.json { render action: 'show', status: :created, location: @bar }
       else
         format.html { render action: 'new' }
@@ -47,7 +47,7 @@ class BarsController < ApplicationController
   def update
     respond_to do |format|
       if @bar.update(bar_params)
-        format.html { redirect_to @bar, notice: 'Bar was successfully updated.' }
+        format.html { redirect_to '/bars', notice: 'La quantité de l\'ingrédient suivant a été mise à jour:' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

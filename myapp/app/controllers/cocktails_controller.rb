@@ -95,7 +95,6 @@ class CocktailsController < ApplicationController
         allcomps.each do |c|
           Cocktail.last.components << c
         end
-        puts Cocktail.last.components.length
         format.html { redirect_to @cocktail, notice: 'Cocktail créé avec succès.' }
         format.json { render action: 'show', status: :created, location: @cocktail }
       else
