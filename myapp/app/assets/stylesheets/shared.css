@@ -32,10 +32,7 @@ body {
 .cocktail-form{
 	width:100%;
 }
-.btn-submit-cocktail{
-	width:50%;
-	margin:10px 25% 10px 25%;
-}
+
 .txtarea-cocktail-form{
 	width: 100%;
 	resize: none;
@@ -52,6 +49,11 @@ body {
 
 .txtarea-container{
 	width: 100%;
+}
+
+.btn-submit{
+	width:50%;
+	margin:10px 25% 10px 25%;
 }
 
 

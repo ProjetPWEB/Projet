@@ -96,7 +96,7 @@ class CocktailsController < ApplicationController
           Cocktail.last.components << c
         end
         puts Cocktail.last.components.length
-        format.html { redirect_to @cocktail, notice: 'Cocktail was successfully created.' }
+        format.html { redirect_to @cocktail, notice: 'Cocktail créé avec succès.' }
         format.json { render action: 'show', status: :created, location: @cocktail }
       else
         format.html { render action: 'new' }
@@ -110,7 +110,7 @@ class CocktailsController < ApplicationController
   def update
     respond_to do |format|
       if @cocktail.update(cocktail_params)
-        format.html { redirect_to @cocktail, notice: 'Cocktail was successfully updated.' }
+        format.html { redirect_to @cocktail, notice: 'Cocktail mis à jour avec succès.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

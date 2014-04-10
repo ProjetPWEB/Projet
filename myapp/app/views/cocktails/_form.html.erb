@@ -2,14 +2,19 @@
 
 	<div class="col-lg-2"></div>
 	<div class="col-lg-8">
+	
 	<%= form_for(@cocktail) do |f| %>
 	  <% if @cocktail.errors.any? %>
 		<div id="error_explanation">
-		  <h2><%= pluralize(@cocktail.errors.count, "error") %> prohibited this cocktail from being saved:</h2>
+		  <h4>
+			<span class="label label-warning"><%= pluralize(@cocktail.errors.count, "erreur") %> a empéché la validation de la recette:</span>
+		  </h4>
 
 		  <ul>
 		  <% @cocktail.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
+			<li>
+				<span class="label label-danger"><%= msg %></span>
+			</li>
 		  <% end %>
 		  </ul>
 		</div>
@@ -69,7 +74,7 @@
 		</table>
 	  </div>
 	  <div class="actions">
-		<%= f.submit :class=>"btn btn-default btn-submit-cocktail"%>
+		<%= f.submit :class=>"btn btn-default btn-submit", :id=>"submit-cocktail-button" %>
 	  </div>
 
 	<div class="align" style="width:100%">
@@ -90,6 +95,7 @@
 <script>
   $('#cocktail_components').attr('class', 'form-control');
   $('#ingredient').attr('class', "btn btn-default dropdown-toggle");
+  $('#submit-cocktail-button').attr('value', "Valider la Recette");
   
   var components = document.getElementById('cocktail_components');
   var btn_add = document.getElementById('btn_add');

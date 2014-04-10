@@ -5,26 +5,37 @@
 <%= form_for(@ingredient) do |f| %>
   <% if @ingredient.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@ingredient.errors.count, "error") %> prohibited this ingredient from being saved:</h2>
+      <h4>
+		<span class="label label-warning"><%= pluralize(@ingredient.errors.count, "erreur") %> a empéché la validation de l'ingrédient:</span>
+	  </h4>
 
       <ul>
-      <% @ingredient.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+		  <% @ingredient.errors.full_messages.each do |msg| %>
+			<li>
+				<span class="label label-danger"><%= msg %></span>
+			</li>
+		  <% end %>
       </ul>
     </div>
   <% end %>
 
-<div class="input-group smoothlayout">
+<div class="input-group smoothlayout" style="width:100%">
     <%= f.label :Nom %>
-    <%= f.text_field :name, :class=>"form-control", :placeholder=>"Nom de l'ingrédient"%>
-    <div class="input-group-button">
-        <select id="ingredient_type" class="btn btn-default dropdown-toggle" name="ingredient[type]" onchange="hideDegree()">
-			<option value="0">Liquide non alcoolisé</option>
-			<option value="1">Liquide alcoolisé</option>
-			<option value="2">Solide</option>
-		</select>
-    </div>
+    <div class="row">
+		<div class="col-lg-3">
+			<%= f.text_field :name, :class=>"form-control", :placeholder=>"Nom de l'ingrédient"%>
+		</div>
+		<div class="col-lg-2">
+			<div class="input-group-button">
+				<select id="ingredient_type" class="btn btn-default dropdown-toggle" name="ingredient[type]" onchange="hideDegree()">
+					<option value="0">Liquide non alcoolisé</option>
+					<option value="1">Liquide alcoolisé</option>
+					<option value="2">Solide</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-lg-7"></div>
+	</div>
 </div>
 
   <div class="field input-group txtarea-container">
@@ -36,7 +47,7 @@
 		<%= f.number_field :degree, :min=>0, :max=>100 %>
 	  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class=>"btn btn-default btn-submit", :id=>"submit-ingr-button" %>
   </div>
 <% end %>
 
@@ -45,6 +56,9 @@
 </div>
 
 <script>
+
+	$('#submit-ingr-button').attr('value', "Valider l'Ingrédient");
+	
 	function hideDegree(){
 		var selectType = document.getElementById("ingredient_type");
 		var selectedType = selectType.selectedIndex;
