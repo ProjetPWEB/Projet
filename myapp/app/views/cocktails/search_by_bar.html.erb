@@ -1,28 +1,46 @@
-<h1>Cocktails réalisables avec le contenu de mon bar</h1>
+	<div class="align"><h3><span class="label label-primary">Liste des Recettes réalisables avec le contenu de mon Bar</span></h3></div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Description</th>
-      <th>Note</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<div class="row">
+	
+	<% @cocktails.each_with_index do |cocktail, i| %>
 
-  <tbody>
-    <% @cocktails.each do |cocktail| %>
-      <tr>
-        <td><%= cocktail.name %></td>
-        <td><%= cocktail.description %></td>
-        <td><%= cocktail.rating %> /20 </td>
-        <td><%= link_to 'En savoir plus', cocktail %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+		<div class="col-lg-4">		
+			<ul class="list-group cocktail-list-item">
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-lg-6">
+							Nom: <%= cocktail.name %>
+						</div>
+						<div class="col-lg-6" style="text-align:center">
+							Difficulté: <%= cocktail.rating %> /20
+						</div>
+					</div>
+				</li>
+				<li class="list-group-item"><%= cocktail.description %></li>
+				<li class="list-group-item"><%= link_to 'Détails', cocktail %></li> 
+			</ul>
+		</div>
+
+		<%if i%3==2 %>
+			</div>
+			<div class="row">
+		<% end %>
+
+	<% end %>
+	
+	</div>
 
 <br>
 
+<div class="align" style="width:100%">
+	<a href="/cocktails/new">
+		<div class="btn-group btn-group-xs">
+			<div class="btn btn-default">Ajouter un cocktail</div>
+		</div>
+	</a>
+	<a href="/search_by_bar">
+		<div class="btn-group btn-group-xs">
+			<div class="btn btn-default">Rechercher les cocktails que je peux faire avec le contenu de mon bar</div>
+		</div>
+	</a>		
+</div>

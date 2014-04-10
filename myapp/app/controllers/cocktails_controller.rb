@@ -30,20 +30,10 @@ class CocktailsController < ApplicationController
         @mes_ingr << b.ingredient
       end
     end
-    puts "Mon Bar"
-    puts @mes_ingr[0].name
-    puts @mes_ingr[1].name
-    puts @mes_ingr[2].name
-    puts "Mon Bar Trié"
     @mes_ingr.sort! { |a,b| a.name.downcase <=> b.name.downcase }
-    puts @mes_ingr[0].name
-    puts @mes_ingr[1].name
-    puts @mes_ingr[2].name
 
     Cocktail.all.each do |c|
       @cocktail_ingr = []
-      puts "Cocktail"
-      puts c.name
       c.components.each do |compo|
         @cocktail_ingr << compo.ingredient 
       end
