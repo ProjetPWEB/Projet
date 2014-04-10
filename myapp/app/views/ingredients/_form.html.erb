@@ -1,3 +1,7 @@
+<div class="row">
+<div class="col-lg-2"></div>
+<div class="col-lg-8">
+
 <%= form_for(@ingredient) do |f| %>
   <% if @ingredient.errors.any? %>
     <div id="error_explanation">
@@ -11,21 +15,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br>
-    <select id="ingredient_type" name="ingredient[type]" onchange="hideDegree()">
-		<option value="0">Liquide non alcoolisé</option>
-		<option value="1">Liquide alcoolisé</option>
-		<option value="2">Solide</option>
-	</select>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+<div class="input-group smoothlayout">
+    <%= f.label :Nom %>
+    <%= f.text_field :name, :class=>"form-control", :placeholder=>"Nom de l'ingrédient"%>
+    <div class="input-group-button">
+        <select id="ingredient_type" class="btn btn-default dropdown-toggle" name="ingredient[type]" onchange="hideDegree()">
+			<option value="0">Liquide non alcoolisé</option>
+			<option value="1">Liquide alcoolisé</option>
+			<option value="2">Solide</option>
+		</select>
+    </div>
+</div>
+
+  <div class="field input-group txtarea-container">
+	<%= f.label :Description %><br>
+	<%= f.text_area :description, :style=>"height:100px", :class=>"form-control txtarea-cocktail-form", :placeholder=>"Description de l'ingrédient"%>
   </div>
 	  <div id="degreeDiv" class="field" style="display:none">
 		<%= f.label :degree %><br>
@@ -35,6 +39,10 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+</div>
+<div class="col-lg-2"></div>
+</div>
 
 <script>
 	function hideDegree(){
